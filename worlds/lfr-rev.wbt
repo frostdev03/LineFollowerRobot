@@ -1,0 +1,119 @@
+#VRML_SIM R2022b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/robots/picaxe/microbot/protos/Microbot.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/apartment_structure/protos/Wall.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/appearances/protos/Roughcast.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.5763874141935778 0.5771083552704769 0.578552931922608 2.09151294970021
+  position -0.03645233617853928 0.05318538291242528 3.8628244278410153
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  translation -0.04 0 0
+  floorSize 3 2
+  floorAppearance PBRAppearance {
+    roughness 1
+    roughnessMap ImageTexture {
+      url [
+        "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/appearances/protos/textures/parquetry/chequered_parquetry_roughness.jpg"
+      ]
+    }
+    metalness 0
+    normalMap ImageTexture {
+      url [
+        "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/appearances/protos/textures/parquetry/chequered_parquetry_normal.jpg"
+      ]
+    }
+    occlusionMap ImageTexture {
+      url [
+        "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/appearances/protos/textures/parquetry/chequered_parquetry_occlusion.jpg"
+      ]
+    }
+  }
+}
+Solid {
+  translation -0.06 0.01 -1.93027e-06
+  rotation 1 0 0 1.5708
+  scale 0.013 0.013 0.013
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+      }
+      geometry Mesh {
+        url [
+          "E:/DOWNLOAD/Mini Track V1/Mini Track V1.obj"
+        ]
+      }
+    }
+  ]
+  name "arena1"
+}
+Microbot {
+  translation -0.0482778 0.227334 0.0212991
+  rotation 0.0008480976380450082 0.0014918928663009018 -0.9999985274919517 3.084208814373725
+  controller "line_follower_fuzzy_fixed_amin"
+  extensionSlot [
+    DistanceSensor {
+      translation 0.045 -0.05 8.98039e-08
+      rotation 0 -1 0 -1.5708053071795867
+      name "ir0"
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation 0.055 -0.04 0
+      rotation 0 -1 0 -1.5708053071795867
+      name "ir1"
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation 0.057 -0.01 0
+      rotation 0 -1 0 -1.5708053071795867
+      name "ir2"
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation 0.057 0 0
+      rotation 0 -1 0 -1.5708053071795867
+      name "ir3"
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation 0.057 0.01 0
+      rotation 0 -1 0 -1.5708053071795867
+      name "ir4"
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation 0.055 0.04 0
+      rotation 0 -1 0 -1.5708053071795867
+      name "ir5"
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation 0.045 0.05 8.98038e-08
+      rotation 0 -1 0 -1.5708053071795867
+      name "ir6"
+      type "infra-red"
+    }
+  ]
+}
+Wall {
+  translation 0 0.22 0
+  size 0.01 0.15 0.1
+  appearance Roughcast {
+    colorOverride 1 0 1
+    textureTransform TextureTransform {
+      scale 2.4 1
+    }
+  }
+}
