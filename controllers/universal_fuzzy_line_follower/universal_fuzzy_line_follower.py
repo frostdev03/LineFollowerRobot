@@ -127,9 +127,11 @@ def run_robot(robot):
     rule58 = ctl.Rule(right_ir_a['putih'] & right_ir_b['hitam'] & mid_ir_a['hitam'] & mid_ir_b['putih'] & mid_ir_c['putih'] & left_ir_a['hitam'] & left_ir_b['putih'], [rms['lambat'], lms['sedang']])
     rule59 = ctl.Rule(right_ir_a['hitam'] & right_ir_b['hitam'] & mid_ir_a['putih'] & mid_ir_b['putih'] & mid_ir_c['hitam'] & left_ir_a['hitam'] & left_ir_b['hitam'], [rms['sedang'], lms['lambat']])
     rule60 = ctl.Rule(right_ir_a['hitam'] & right_ir_b['hitam'] & mid_ir_a['putih'] & mid_ir_b['putih'] & mid_ir_c['putih'] & left_ir_a['hitam'] & left_ir_b['hitam'], [rms['sedang'], lms['sedang']])
+    rule61 = ctl.Rule(right_ir_a['putih'] & right_ir_b['hitam'] & mid_ir_a['putih'] & mid_ir_b['putih'] & mid_ir_c['hitam'] & left_ir_a['hitam'] & left_ir_b['hitam'], [rms['sedang'], lms['lambat']])
+    rule62 = ctl.Rule(right_ir_a['putih'] & right_ir_b['hitam'] & mid_ir_a['putih'] & mid_ir_b['putih'] & mid_ir_c['hitam'] & left_ir_a['hitam'] & left_ir_b['hitam'], [rms['sedang'], lms['lambat']])
             
     # Sistem kontrol fuzzy
-    fuzzy_control = ctl.ControlSystem([rule1, rule2, rule3, rule4, rule5, rule6, rule7, rule8, rule9, rule10, rule11, rule12, rule13, rule14, rule15, rule16, rule17, rule18, rule19, rule20, rule21, rule22, rule23, rule24, rule25, rule26, rule27, rule28, rule29, rule30, rule31, rule32, rule33, rule34, rule35, rule36, rule37, rule38, rule39, rule40, rule41, rule42, rule43, rule44, rule45, rule46, rule47, rule48, rule49, rule50, rule51, rule52, rule53, rule54, rule55, rule56, rule57, rule58, rule59, rule60])
+    fuzzy_control = ctl.ControlSystem([rule1, rule2, rule3, rule4, rule5, rule6, rule7, rule8, rule9, rule10, rule11, rule12, rule13, rule14, rule15, rule16, rule17, rule18, rule19, rule20, rule21, rule22, rule23, rule24, rule25, rule26, rule27, rule28, rule29, rule30, rule31, rule32, rule33, rule34, rule35, rule36, rule37, rule38, rule39, rule40, rule41, rule42, rule43, rule44, rule45, rule46, rule47, rule48, rule49, rule50, rule51, rule52, rule53, rule54, rule55, rule56, rule57, rule58, rule59, rule60, rule61, rule62])
     
     sensor_input = ctl.ControlSystemSimulation(fuzzy_control)
 
