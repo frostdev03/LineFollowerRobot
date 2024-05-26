@@ -4,22 +4,20 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/project
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/floors/protos/RectangleArena.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/robots/picaxe/microbot/protos/Microbot.proto"
-EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/apartment_structure/protos/Wall.proto"
-EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/appearances/protos/Roughcast.proto"
 
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.5763874141935778 0.5771083552704769 0.578552931922608 2.09151294970021
-  position -0.03645233617853928 0.05318538291242528 3.8628244278410153
+  orientation -0.580958551147392 0.5758972584136449 0.5751778069435314 2.105208574828649
+  position 0.04055305151055899 -0.10028315679584365 7.382341644034607
 }
 TexturedBackground {
 }
 TexturedBackgroundLight {
 }
 RectangleArena {
-  translation -0.04 0 0
-  floorSize 3 2
+  translation -0.06 -0.25 0
+  floorSize 4.9 3
   floorAppearance PBRAppearance {
     roughness 1
     roughnessMap ImageTexture {
@@ -41,9 +39,9 @@ RectangleArena {
   }
 }
 Solid {
-  translation -0.06 0.01 -1.93027e-06
-  rotation 1 0 0 1.5708
-  scale 0.013 0.013 0.013
+  translation 2.01 -1.05 -7.55587e-06
+  rotation -1 0 0 -5.307179586466759e-06
+  scale 0.019 0.019 0.019
   children [
     Shape {
       appearance PBRAppearance {
@@ -51,17 +49,79 @@ Solid {
       }
       geometry Mesh {
         url [
-          "E:/DOWNLOAD/Mini Track V1/Mini Track V1.obj"
+          "C:/Users/fahri/Downloads/sulawesi/tinker.obj"
         ]
       }
     }
   ]
-  name "arena1"
+  name "sulawesi"
+}
+Solid {
+  translation -1.7935 -0.152426 -2.7923e-06
+  rotation -2.0155999995834707e-05 -2.653589999451628e-06 0.9999999997933471 -0.261795307179586
+  scale 0.009 0.009 0.009
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+      }
+      geometry Mesh {
+        url [
+          "C:/Users/fahri/Downloads/arena.s/tinker.obj"
+        ]
+      }
+    }
+  ]
+  name "sumatera"
+}
+Solid {
+  translation 0.318824 -1.31335 -8.95317e-06
+  rotation 2.015529999583514e-05 -2.6534999994516847e-06 0.9999999997933615 0.261805
+  scale 0.02 0.02 0.02
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+      }
+      geometry Mesh {
+        url [
+          "C:/Users/fahri/Downloads/DesainArena/tinker.obj"
+        ]
+      }
+    }
+  ]
+  name "jawa"
+}
+Solid {
+  translation -0.326179 -0.606202 -5.20023e-06
+  rotation 2.015529999583514e-05 -2.6534999994516847e-06 0.9999999997933615 0.261805
+  scale 0.01 0.01 0.01
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+      }
+      geometry Mesh {
+        url [
+          "C:/Users/fahri/Downloads/KaliMANTAN/tinker.obj"
+        ]
+      }
+    }
+  ]
+  name "kalimantan"
 }
 Microbot {
-  translation -0.0482778 0.227334 0.0212991
-  rotation 0.0008480976380450082 0.0014918928663009018 -0.9999985274919517 3.084208814373725
-  controller "line_follower_fuzzy_fixed_amin"
+  hidden position_0_0 -1520.9918324293276
+  hidden position_0_1 -520.3027630862696
+  hidden translation_11 3.068958735652494e-05 2.1307835716299905e-05 9.006875728231889e-08
+  hidden rotation_11 -0.3432326498506696 0.8699445042298077 0.3541015498933064 1.0967342251698457e-15
+  hidden translation_12 3.348403141045786e-05 -1.6583279544013507e-05 6.67444976995557e-08
+  hidden rotation_12 0.18061567040913787 -0.18485990287306017 0.9660252563532801 4.598155089437239e-16
+  hidden rotation_14 0 1 0 0.4609880918676596
+  hidden rotation_15 0 1 0 5.081567897543487
+  translation -1.52994 -0.732268 0.0209432
+  rotation 0.003370939123583065 -0.0017767095380698758 -0.9999927400099676 0.946684
+  controller "universal_fuzzy_line_follower"
   extensionSlot [
     DistanceSensor {
       translation 0.045 -0.05 8.98039e-08
@@ -106,14 +166,4 @@ Microbot {
       type "infra-red"
     }
   ]
-}
-Wall {
-  translation 0 0.22 0
-  size 0.01 0.15 0.1
-  appearance Roughcast {
-    colorOverride 1 0 1
-    textureTransform TextureTransform {
-      scale 2.4 1
-    }
-  }
 }
