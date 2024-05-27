@@ -8,8 +8,8 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/project
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.599462885145109 0.6002124844464235 0.5295179155119815 2.166599098867877
-  position -0.12523265323289068 0.7192467194164589 8.545264094388868
+  orientation -0.5773502691896258 0.5773502691896258 0.5773502691896258 2.0944
+  position 0.0337703265121309 -0.18297451601015077 4.356031974626996
 }
 TexturedBackground {
 }
@@ -17,7 +17,7 @@ TexturedBackgroundLight {
 }
 RectangleArena {
   translation -0.06 -0.25 0
-  floorSize 4.9 3
+  floorSize 2 2
   floorAppearance PBRAppearance {
     roughness 1
     roughnessMap ImageTexture {
@@ -39,63 +39,9 @@ RectangleArena {
   }
 }
 Solid {
-  translation 2.01 -1.05 -7.55587e-06
+  translation -0.07 -0.57 -5.00843e-06
   rotation -1 0 0 -5.307179586466759e-06
-  scale 0.019 0.019 0.019
-  children [
-    Shape {
-      appearance PBRAppearance {
-        baseColor 0 0 0
-      }
-      geometry Mesh {
-        url [
-          "C:/Users/fahri/Downloads/sulawesi/tinker.obj"
-        ]
-      }
-    }
-  ]
-  name "sulawesi"
-}
-Solid {
-  translation -1.74191 -0.114483 -2.59096e-06
-  rotation -2.0155999995834707e-05 -2.653589999451628e-06 0.9999999997933471 -0.261795307179586
-  scale 0.009 0.009 0.009
-  children [
-    Shape {
-      appearance PBRAppearance {
-        baseColor 0 0 0
-      }
-      geometry Mesh {
-        url [
-          "C:/Users/fahri/Downloads/arena.s/tinker.obj"
-        ]
-      }
-    }
-  ]
-  name "sumatera"
-}
-Solid {
-  translation 0.432226 -1.27254 -8.73673e-06
-  rotation 2.015529999583514e-05 -2.6534999994516847e-06 0.9999999997933615 0.261805
-  scale 0.02 0.02 0.02
-  children [
-    Shape {
-      appearance PBRAppearance {
-        baseColor 0 0 0
-      }
-      geometry Mesh {
-        url [
-          "C:/Users/fahri/Downloads/DesainArena/tinker.obj"
-        ]
-      }
-    }
-  ]
-  name "jawa"
-}
-Solid {
-  translation -0.22908 -0.466307 -4.45775e-06
-  rotation 2.015529999583514e-05 -2.6534999994516847e-06 0.9999999997933615 0.261805
-  scale 0.01 0.01 0.01
+  scale 0.016 0.016 0.016
   children [
     Shape {
       appearance PBRAppearance {
@@ -108,19 +54,11 @@ Solid {
       }
     }
   ]
-  name "kalimantan"
+  name "sulawesi"
 }
 Microbot {
-  hidden position_0_0 -1480.658947356482
-  hidden position_0_1 -449.4774945228894
-  hidden translation_11 5.7568130940932605e-05 3.979809349630159e-05 1.6333955030201075e-07
-  hidden rotation_11 -0.22241267794821967 -0.6966823449866447 -0.6820310189953322 2.6070066112878667e-15
-  hidden translation_12 6.26591722301395e-05 -3.118999964557556e-05 1.2377332982843603e-07
-  hidden rotation_12 -0.05580251426552809 0.44707404983827387 -0.8927546546296188 1.989557351022434e-15
-  hidden rotation_14 0 -0.9999999999999999 0 2.1727851379003775
-  hidden rotation_15 0 -1 0 2.9118475940408253
-  translation 0.973611 0.503433 0.0271208
-  rotation 0.0278282040206339 0.001073210155057981 0.9996121444245007 0.122755
+  translation -0.755923 -0.603353 0.0197745
+  rotation -0.0007868777872793375 0.0024334093421641127 0.9999967296658131 -1.4934353071795865
   controller "universal_fuzzy_line_follower"
   extensionSlot [
     DistanceSensor {
