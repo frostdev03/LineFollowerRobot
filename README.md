@@ -1,5 +1,5 @@
 # Line Follower Robot
-### Line Follower Robot in Webots using Fuzzy Algorithm
+### Line Follower Robot in Webots using Fuzzy Logic Controller
 
 Before running this program you must install:
 - Python
